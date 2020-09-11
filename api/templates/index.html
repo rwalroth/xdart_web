@@ -1,9 +1,32 @@
 {% extends "base.html" %}
-
-{% block body %}
-    <header>
-    <h1>
-        Hello World!
-    </h1>
-    </header>
+{% block head %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
 {% endblock %}
+{% block header %}
+    {{ super() }}
+    <h1>
+        X-ray Data Analysis in Real Time
+    </h1>
+{% endblock header %}
+{% block main %}
+    <div class="center-block">
+        <div class="scroll-menu" id="control-panel">
+            <h1>Beamline Controls</h1>
+            <form class="login-form scroll-area hidden" method="POST" name="login" id="login" action="/login" enctype="application/x-www-form-urlencoded">
+                <label for="accountId">Username</label><input type="text" maxlength="50" name="accountId" id="accountId">
+                <label for="password">Password</label><input type="password" maxlength=32 name="password" id="password">
+                <input type="submit" value="Log in">
+            </form>
+            <ul class="scroll-area" id="control-list">
+
+            </ul>
+        </div>
+        <div class="scroll-menu" id="analysis-menu">
+            <h1>Analysis Tools</h1>
+            <ul class="scroll-area">
+                <li><a href="/twotheta_scan">Scanning Area Detector</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock main %}

@@ -1,18 +1,21 @@
 from flask import Flask
 from api.routes import bp
-from api.sql_database import db, migrate
+from api.blueprints.ttheta_scan.ttheta_scan import ttheta_scan_bp
+from api.extensions import db, migrate, bcrypt
 from api.admin_views import admin
+from api.config import Config
 
 
 def create_app():
     app = Flask(__name__)
-    app.register_blueprint(bp)
+    app.config.from_object(Config)
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-    app.config['SECRET_KEY'] = "thisisthesecretkeyforxdartCHANGETHISINPRODUCTION" # This needs to be changed for production!!
+    app.register_blueprint(bp)
+    app.register_blueprint(ttheta_scan_bp)
 
     db.init_app(app)
     migrate.init_app(app, db)
+    bcrypt.init_app(app)
     admin.init_app(app)
 
     return app

@@ -1,0 +1,159 @@
+/*
+SLAC Colors:
+    Red: #8C1515
+    Beige: #D2C295
+    Dark Beige: #A79E70
+    Grey: #4D4F53
+*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Avenir, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #8C1515;
+}
+
+.navbar-list {
+    background-color: #8C1515;
+    color: white;
+    display: flex;
+    padding: 0 20px;
+    height: 60px;
+    margin-top: 0;
+    list-style: none;
+}
+
+.navbar-list li {
+    margin: auto 20px;
+}
+
+.navbar-list li:last-child {
+    margin-left: auto;
+}
+
+.navbar-list img {
+    height: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-list a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+}
+
+.navbar-list a:hover {
+    color: #8C1515;
+    background-color: white;
+    text-decoration: none;
+}
+
+.dropdown-header {
+    width: 150px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #D2C295;
+    border: #8C1515 2px solid;
+    z-index: 1;
+    width: 150px;
+    padding: 10px 5px;
+}
+
+.dropdown-menu a {
+    padding: 5px 5px 5px 5px;
+    width: 130px;
+    display: block;
+    background-color: #8C1515;
+}
+
+.dropdown-menu a:hover {
+    background-color: white;
+}
+
+.dropdown-menu li {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-header:hover .dropdown-menu {
+    display: block;
+}
+
+header h1 {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.center-block {
+    display: flex;
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.scroll-menu {
+    margin: 10px;
+    width: 400px;
+}
+
+.scroll-menu h1 {
+    font-size: 16pt;
+    height: 25px;
+    padding: 5px;
+}
+
+.scroll-area {
+    border: #8C1515 2px solid;
+    height: 150px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.scroll-area li {
+    list-style: none;
+    width: auto;
+}
+
+.scroll-area li a {
+    display: block;
+    background-color: #8C1515;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.scroll-area li a:hover {
+    color: #8C1515;
+    background-color: white;
+    text-decoration: none;
+    border: #8C1515 2px solid;
+}
+
+.login-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+/* hidden must be last! */
+.hidden {
+    visibility: hidden;
+    display: none;
+}

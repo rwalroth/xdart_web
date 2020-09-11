@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <header>
+    <h1>
+        Login
+    </h1>
+    </header>
+    <main>
+    <form method="POST" name="login" id="login" action="/login" enctype="application/x-www-form-urlencoded">
+        <label for="accountId">Username</label><input type="text" maxlength="50" name="accountId" id="accountId">
+        <label for="password">Password</label><input type="password" maxlength=32 name="password" id="password">
+        <input type="submit" value="Log in">
+    </form>
+    </main>
+{% endblock %}
