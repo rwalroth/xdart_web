@@ -1,4 +1,46 @@
 {% extends "base.html" %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('ttheta_scan.static', filename='css/ttheta.css') }}">
+    <script type="application/javascript" src="{{ url_for('ttheta_scan.static', filename='js/ttheta_scan.js') }}" defer></script>
+{% endblock head %}
 {% block main %}
-    <h1>Scanning area detector</h1>
+<section class="frame" id="mainFrame">
+    <section class="frame" id="leftFrame">
+        <section class="frame" id="dataBrowserFrame">
+            <div class="toolBar" id="dataToolBar">
+                <input type="text" id="directoryField" placeholder="Directory path">
+                <div class="dropdown" id="fileMenu">
+                    <span>File</span>
+                    <div class="dropdown-content">
+                        <input type="button" value="Download 1D">
+                        <input type="button" value="Download 2D">
+                        <input type="button" value="Download Data">
+                    </div>
+                </div>
+            </div>
+            <li class="frame" id="scanList">
+                <ui>
+                    scan list
+                </ui>
+            </li>
+            <li class="frame" id="imageList">
+                <ui>
+                    image list
+                </ui>
+            </li>
+        </section>
+        <section class="frame" id="metadataFrame">Metadata</section>
+    </section>
+    <section class="frame" id="middleFrame">
+        <section class="frame" id="PlotFrame2D">
+        </section>
+        <section class="frame" id="PlotFrame1D">
+        </section>
+    </section>
+    <section class="frame" id="rightFrame">
+        <section class="frame" id="integratorFrame">Integrator</section>
+        <section class="frame" id="wranglerFrame">Wrangler</section>
+    </section>
+</section>
 {%  endblock main %}

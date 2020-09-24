@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
     {{ super() }}
-    <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+    <script type="application/javascript" src="{{ url_for('static', filename='js/index.js') }}" defer></script>
 {% endblock %}
 {% block header %}
     {{ super() }}
@@ -25,7 +25,7 @@
         <div class="scroll-menu" id="analysis-menu">
             <h1>Analysis Tools</h1>
             <ul class="scroll-area">
-                <li><a href="/twotheta_scan">Scanning Area Detector</a></li>
+                <li><a href="/ttheta_scan">Scanning Area Detector</a></li>
             </ul>
         </div>
     </div>

@@ -22,7 +22,7 @@ def validate_token(token):
 def token_required(f):
     @wraps(f)
     def check_token(*args, **kwargs):
-        token = session['token']
+        token = session.get('token', None)
         if token is None:
             return render_template("403.html", message="Invalid token")
         user = validate_token(token)

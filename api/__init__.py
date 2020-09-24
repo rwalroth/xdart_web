@@ -11,7 +11,7 @@ def create_app():
     app.config.from_object(Config)
 
     app.register_blueprint(bp)
-    app.register_blueprint(ttheta_scan_bp)
+    app.register_blueprint(ttheta_scan_bp, url_prefix="/ttheta_scan")
 
     db.init_app(app)
     migrate.init_app(app, db)

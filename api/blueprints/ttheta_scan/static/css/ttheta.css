@@ -1,0 +1,70 @@
+body {
+    background-color: #2e2d29;
+}
+
+/********************MAIN******************/
+
+#mainFrame {
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: #2e2d29;
+    height: 800;
+}
+
+/********************LEFT******************/
+
+#leftFrame {
+    grid-template-rows: 1.5fr 1fr;
+    background-color: #2e2d29;
+}
+
+/* Data Browser */
+
+#dataBrowserFrame {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 1fr;
+    background-color: #2e2d29;
+}
+
+#dataToolBar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+input[id="directoryField"] {
+    flex: 1 1;
+    border: none;
+    border-right: 2px solid #2e2d29;
+}
+
+/* Metadata */
+
+/********************MIDDLE******************/
+
+#middleFrame {
+    grid-template-rows: 400px 400px;
+    background-color: #2e2d29;
+}
+
+/* 2D Plot */
+
+#PlotFrame2D img {
+    width: 700px;
+    height: 350px;
+}
+
+/* 1D Plot */
+
+#PlotFrame1D img {
+    width: 700px;
+    height: 350px;
+}
+
+/********************RIGHT******************/
+
+#rightFrame {
+    grid-template-rows: 1.5fr 1fr;
+    background-color: #2e2d29;
+}
+
+/* Integrator */
+
+/* Wrangler */
