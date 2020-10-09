@@ -35,10 +35,13 @@ def login():
         return jsonify({"message": "User or email invalid"})
 
 
-@bp.route("/logout")
+@bp.route("/logout", methods=["GET", "POST"])
 def logout():
     session['token'] = None
-    return redirect("/")
+    if request.method == "GET":
+        return redirect("/")
+    else:
+        return jsonify({"message": "Logout successful"})
 
 
 @bp.route("/protected", methods=["GET", "POST"])
